@@ -6,11 +6,6 @@
     <link rel="stylesheet" href="./lib/bootstrap.css">
     <script src="./lib/jquery.js"></script>
     <script src="./lib/bootstrap.js"></script>
-    <style>
-        .active {
-            background-color: blue;
-        }
-    </style>
 </head>
 <body>
 <div id="app">
@@ -32,23 +27,15 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
+                        <li v-for="food in foodList">{{ food }}</li>
                     </div>
 
                     <div class="col-md-4">
-                        <button v-on="{mouseenter: onEnter, mouseleave: onOut}"
-                                v-on:click="onClick">
-                            点我试试?
-                        </button>
+                        <li v-for="food in foodLists">
+                            {{ food.name }} : {{ food.discount ? food.price * food.discount : food.price }}
+                        </li>
                     </div>
-
                     <div class="col-md-4">
-                        <form
-                        v-on:submit.event="onSubmit"
-                        v-on:keyup.enter="onEnter"
-                        >
-                            <input type="text">
-                        <button type="submit">Submit</button>
-                        </form>
                     </div>
                 </div>
             </div>
