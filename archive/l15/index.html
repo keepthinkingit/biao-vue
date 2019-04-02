@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Biao.vue</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/bootstrap.js"></script>
+    <style>
+        .active {
+            background-color: blue;
+        }
+
+        .liked {
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h2>
+                        Hello, world!
+                    </h2>
+                    <p>
+                        This is a template for a simple marketing or informational website. It includes a large callout
+                        called the hero unit and three supporting pieces of content. Use it as a starting point to
+                        create something more unique.
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                    </p>
+                </div>
+                <div class="row">
+                    <!--<div class="col-md-4">-->
+                    <!--</div>-->
+
+                    <div class="col-md-5" id="seg1">
+                        <div class="card"  v-pin="card1.pinned">
+                            <a class="text-info bg-dark" @click="card1.pinned = !card1.pinned">pin me</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        </div>
+                        <div class="card" v-pin="card2.pinned">
+                            <button class="btn btn-primary" @click="card2.pinned = !card2.pinned">钉住/取消</button>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        </div>
+                        <div class="card" v-pin="card3.pinned">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        </div>
+
+                        <span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae nam nobis odit quas quos reprehenderit veritatis! Cum dicta, distinctio ducimus eaque earum excepturi facilis illum quod ratione repellendus. Laboriosam?</p>
+                            </span><span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et officia reprehenderit totam veniam veritatis. Aperiam autem cumque dignissimos distinctio doloribus ea eius maiores odit, optio quae, rerum, soluta vitae voluptatibus.</p>
+                            </span><span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis fuga omnis quae quis sunt unde vel! Animi culpa, debitis delectus eos ex fugit impedit ipsum, quae, quaerat sapiente suscipit.</p>
+                            </span>
+                    </div>
+
+                    <div class="col-md-3">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./lib/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -35,13 +35,20 @@
                     </p>
                 </div>
                 <div class="row">
+                    <!--<div class="col-md-4">-->
+                    <!--</div>-->
 
                     <div class="col-md-5" id="seg1">
-                        <panel>
-                            <div slot="title">Yes</div>
-                            <div slot="content">YOYOYO</div>
-                            <div slot="footer">Dida</div>
-                        </panel>
+                        <div class="">
+                            <input type="text" v-model="length"> mm
+                            {{ length | meter}}
+                        </div>
+                        <hr>
+                        <input type="text" v-model="price">
+                        {{ price | currency('USD') }}
+                    </div>
+
+                    <div class="col-md-3">
                     </div>
 
                 </div>
@@ -50,21 +57,6 @@
     </div>
 </div>
 
-<!--模板-->
-<template id="panel-tpl">
-    <div class="card">
-        <div class="card-header">
-            Featured
-        </div>
-        <div class="card-body">
-            <h5 class="card-title"><slot name="title"></slot></h5>
-            <p class="card-text">
-                <slot name="content"></slot>
-            </p>
-            <a href="#" class="btn btn-primary"><slot name="footer"></slot></a>
-        </div>
-    </div>
-</template>
 
 <script src="./lib/vue.js"></script>
 <script src="main.js"></script>
