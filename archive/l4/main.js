@@ -2,22 +2,29 @@ let app = new Vue({
     el: '#app',
     data : {
         foodList : ['葱','姜','蒜'],
-        foodLists : [
-            {
-                name : '葱',
-                price : 6,
-            },
-            {
-                name : '姜',
-                price : 10,
-                discount : .7,
-            },
-            {
-                name : '蒜',
-                price : 15,
-                discount : .9,
-            },
+        url : 'https://cn.bing.com/search?q=',
+        isActive : true,
+    },
 
-        ],
+    methods: {
+        onClick: function(event) {
+            alert('Hello');
+        },
+
+        onEnter: function() {
+            console.log('mouse entered');
+        },
+        onOut: function() {
+            console.log('mouse leave');
+        },
+        onSubmit: function (e) {
+            e.preventDefault();
+            console.log('submitted');
+        },
+        onEnter: function (e) {
+            console.log('key up')
+        }
     }
+
+
 })

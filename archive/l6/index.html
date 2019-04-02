@@ -32,22 +32,53 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
+                        <textarea name="textarea" v-model="textarea" cols="30" rows="10"></textarea>
+                        {{ textarea }}
                     </div>
 
-                    <div class="col-md-4">
-                        <button v-on="{mouseenter: onEnter, mouseleave: onOut}"
-                                v-on:click="onClick">
-                            点我试试?
-                        </button>
+                    <div class="col-md-3">
+                        <form action="post">
+                            <div class="form-group">
+                                <label>male</label><input type="radio" value="male" v-model="sex">
+                                <label>female</label><input type="radio" value="female" v-model="sex">
+                            </div>
+                            {{ sex }}
+                        </form>
                     </div>
 
-                    <div class="col-md-4">
-                        <form
-                        v-on:submit.event="onSubmit"
-                        v-on:keyup.enter="onEnter"
-                        >
-                            <input type="text">
-                        <button type="submit">Submit</button>
+                    <div class="col-md-3">
+                        <form action="post">
+                            <div class="form-group">
+                                <label>红</label><input type="checkbox" value="red" v-model="color">
+                                <label>黄</label><input type="checkbox" value="yellow" v-model="color">
+                                <label>黑</label><input type="checkbox" value="black" v-model="color">
+                            </div>
+                            {{ color }}
+                        </form>
+                    </div>
+
+                    <div class="col-md-2">
+                        <form action="post">
+                            <div class="form-group">
+                                <p>你来自哪里?</p>
+                                <select name="address" v-model="address">
+                                    <option value="1">牛家堡</option>
+                                    <option value="2">李家屯</option>
+                                </select>
+                                {{ address }}
+                            </div>
+
+                            <div class="form-group">
+                                <p>你准备去哪里?</p>
+                                <select name="destination" id="" v-model="destination" multiple>
+                                    <option value="1">山</option>
+                                    <option value="2">河</option>
+                                    <option value="3">湖</option>
+                                    <option value="4">海</option>
+                                    <option value="5">天</option>
+                                </select>
+                                {{ destination }}
+                            </div>
                         </form>
                     </div>
                 </div>

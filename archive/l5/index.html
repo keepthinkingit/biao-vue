@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Biao.vue</title>
-    <link rel="stylesheet" href="./lib/bootstrap.css">
-    <script src="./lib/jquery.js"></script>
-    <script src="./lib/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../lib/bootstrap.css">
+    <script src="../../lib/jquery.js"></script>
+    <script src="../../lib/bootstrap.js"></script>
     <style>
-        .active  {
+        .active {
             background-color: blue;
         }
     </style>
@@ -32,15 +32,18 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                            <a :href="url"
-                                :class="{active : isActive}">
-                                点击搜索
-                            </a>
                     </div>
 
                     <div class="col-md-4">
                     </div>
+
                     <div class="col-md-4">
+                            <input type="text" v-model.lazy="name">
+                            {{ name }}<br>
+                            <input type="text" v-model.trim="lastName">
+                            {{ lastName }}<br>
+                            <input type="text" v-model.number="price">
+                            {{ price }}<br>
                     </div>
                 </div>
             </div>
@@ -49,7 +52,7 @@
 </div>
 
 
-<script src="./lib/vue.js"></script>
+<script src="../../lib/vue.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

@@ -10,6 +10,10 @@
         .active {
             background-color: blue;
         }
+
+        .liked {
+            background-color: deeppink;
+        }
     </style>
 </head>
 <body>
@@ -31,25 +35,16 @@
                     </p>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <!--<div class="col-md-4">-->
+                    <!--</div>-->
+
+                    <div class="col-md-5" id="seg1">
+                        <balance></balance>
                     </div>
 
-                    <div class="col-md-4">
-                        <button v-on="{mouseenter: onEnter, mouseleave: onOut}"
-                                v-on:click="onClick">
-                            点我试试?
-                        </button>
+                    <div class="col-md-3">
                     </div>
 
-                    <div class="col-md-4">
-                        <form
-                        v-on:submit.event="onSubmit"
-                        v-on:keyup.enter="onEnter"
-                        >
-                            <input type="text">
-                        <button type="submit">Submit</button>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Biao.vue</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/bootstrap.js"></script>
+    <style>
+        .active {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h2>
+                        Hello, world!
+                    </h2>
+                    <p>
+                        This is a template for a simple marketing or informational website. It includes a large callout
+                        called the hero unit and three supporting pieces of content. Use it as a starting point to
+                        create something more unique.
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                    </p>
+                </div>
+                <div class="row">
+                    <!--<div class="col-md-4">-->
+                    <!--</div>-->
+
+                    <div class="col-md-5">
+                        <table class="table">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">name</th>
+                                <th scope="col">math</th>
+                                <th scope="col">english</th>
+                                <th scope="col">music</th>
+                                <th scope="col">summary</th>
+                                <th scope="col">average</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Mar</th>
+                                <td><input type="text" name="math" v-model.number="math"></td>
+                                <td><input type="text" name="english" v-model.number="english"></td>
+                                <td><input type="text" name="music" v-model.number="music"></td>
+                                <td>{{ sum }}</td>
+                                <td>{{ average }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">acob</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Larry</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-md-3">
+                    </div>
+
+                    <!--<div class="col-md-2">-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./lib/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

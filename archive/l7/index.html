@@ -32,23 +32,21 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
+                        <div v-if="role == 'admin'">
+                            管理员你好
+                        </div>
+                        <div v-else>
+                            你没有权限访问此页面
+                        </div>
                     </div>
 
-                    <div class="col-md-4">
-                        <button v-on="{mouseenter: onEnter, mouseleave: onOut}"
-                                v-on:click="onClick">
-                            点我试试?
-                        </button>
+                    <div class="col-md-3">
                     </div>
 
-                    <div class="col-md-4">
-                        <form
-                        v-on:submit.event="onSubmit"
-                        v-on:keyup.enter="onEnter"
-                        >
-                            <input type="text">
-                        <button type="submit">Submit</button>
-                        </form>
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-2">
                     </div>
                 </div>
             </div>

@@ -4,6 +4,11 @@ let app = new Vue({
         foodList : ['葱','姜','蒜'],
         url : 'https://cn.bing.com/search?q=',
         isActive : true,
+        sex: 'female',
+        color : ['yellow'],
+        textarea : ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
+        address: null,
+        destination: [],
     },
 
     methods: {

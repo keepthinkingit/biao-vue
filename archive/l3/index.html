@@ -1,30 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <title>l3</title>
+    <title>Biao.vue</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/bootstrap.js"></script>
+    <style>
+        .active  {
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
-    <div class="">
-        <span>请输入名字:</span>
-        <input type="text" v-model="name">
-        <p v-show="name">你的名字是 : {{ name }}</p>
-    </div>
-    <div class="">
-        <span>请输入年龄:</span>
-        <input type="text" v-model="age">
-        <p v-show="age">你的年龄是 : {{ age }}</p>
-    </div>
-    <div class="">
-        <span>请输入性别:</span>
-        <input type="text" v-model="sex">
-        <p v-show="sex">你的性别是 : {{ sex }}</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h2>
+                        Hello, world!
+                    </h2>
+                    <p>
+                        This is a template for a simple marketing or informational website. It includes a large callout
+                        called the hero unit and three supporting pieces of content. Use it as a starting point to
+                        create something more unique.
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                            <a :href="url"
+                                :class="{active : isActive}">
+                                点击搜索
+                            </a>
+                    </div>
+
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 
-<script src="../../lib/vue.js"></script>
+<script src="./lib/vue.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
