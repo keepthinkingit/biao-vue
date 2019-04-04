@@ -20,7 +20,7 @@ Vue.component('huahua', {
     }
 });
 
-//子组件 show 进行操作,完成后 回调数据(事件)给父组件 (此处是 balance )
+
 Vue.component('erdan', {
     template:`
     <div>
